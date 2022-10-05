@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC9 - Ability to view Persons by City or State
- * Maintain Dictionary of City and Person well as State and Person
+ * UC10- Ability to get number of contact persons i.e. count by City or State
  */
 
 public class AddressBookMain {

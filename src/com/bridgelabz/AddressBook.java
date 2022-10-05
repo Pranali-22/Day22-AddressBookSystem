@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC6- Refactor to add multiple Address Book to the System. 
- * Each Address Book has a unique Name - Use Console to add new Address Book
+ * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
+ * Address Book - Duplicate Check is done
  */
 
 public class AddressBook {
@@ -34,7 +34,20 @@ public class AddressBook {
 		
 		Contact personContact =  new Contact(firstName1, lastName1, address1, city1, state1, zip1, phoneNo1, email1);
 		
-		contactList.add(personContact);
+		if(contactList.isEmpty()) {
+			contactList.add(personContact);
+		}
+		else {
+			for(int i=0; i < contactList.size(); i++) {
+				if(contactList.get(i).firstName.equals(firstName1) && contactList.get(i).lastName.equals(lastName1)) {
+					System.out.println("Person already exists with same first name and last name");
+					break;
+				}
+				else {
+					contactList.add(personContact);
+				}
+			}
+		}
 	}
 	
 	// Edit person name for the given name

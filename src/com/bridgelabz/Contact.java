@@ -5,7 +5,7 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- *  UC4- Ability to delete a person using person's name - Use Console to delete a person
+ *  UC5- Ability to add multiple persons to AddressBook
  */
 public class Contact {
 

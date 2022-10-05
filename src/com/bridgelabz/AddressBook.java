@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- *  UC4- Ability to delete a person using person's name - Use Console to delete a person
+ *  UC5- Ability to add multiple persons to AddressBook
  */
 
 public class AddressBook {
@@ -75,11 +75,16 @@ public class AddressBook {
 		
 		System.out.println("\nEnter name of person to delete contact");
 		String name = input.nextLine();
+		int found=0;
 		for(int i=0; i <contactList.size(); i++) {	
 			if(contactList.get(i).firstName.equals(name)) {
 				contactList.remove(i);
-				break;
+				found=1;
+				return;
 			}
+		}
+		if(found==0) {
+			System.out.println("No record found with given name to delete");
 		}
 	}
 }

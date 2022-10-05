@@ -5,7 +5,7 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * UC2 - Ability to add a new Contact to Address Book
+ * UC3 - Ability to edit existing contact person using their name
  */
 public class Contact {
 
@@ -33,7 +33,7 @@ public class Contact {
 	}
 
 	//Method for displaying data
-	public void displaData() {
+	public void displayContact() {
 		System.out.println("First Name : "+firstName);
 		System.out.println("Last Name : "+lastName);
 		System.out.println("Address : "+address);

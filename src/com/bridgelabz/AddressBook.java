@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
- * Address Book - Duplicate Check is done
+ * UC6 - add multiple Address Book to the System.
  */
 
 public class AddressBook {
@@ -33,21 +32,7 @@ public class AddressBook {
 		email1 = input.nextLine();
 		
 		Contact personContact =  new Contact(firstName1, lastName1, address1, city1, state1, zip1, phoneNo1, email1);
-		
-		if(contactList.isEmpty()) {
-			contactList.add(personContact);
-		}
-		else {
-			for(int i=0; i < contactList.size(); i++) {
-				if(contactList.get(i).firstName.equals(firstName1) && contactList.get(i).lastName.equals(lastName1)) {
-					System.out.println("Person already exists with same first name and last name");
-					break;
-				}
-				else {
-					contactList.add(personContact);
-				}
-			}
-		}
+		contactList.add(personContact);
 	}
 	
 	// Edit person name for the given name

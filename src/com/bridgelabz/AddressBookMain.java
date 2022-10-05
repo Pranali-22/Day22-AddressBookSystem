@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
- * Address Book - Duplicate Check is done
+ * UC6 - add multiple Address Book to the System.
  */
 
 public class AddressBookMain {

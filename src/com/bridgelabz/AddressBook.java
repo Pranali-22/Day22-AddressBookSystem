@@ -4,12 +4,14 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 /**
  * @author Dell
- * UC8 - Ability to search Person in a City or State across the multiple AddressBook 
- *  Search Result can show multiple
+ * UC9 - Ability to view Persons by City or State
+ * Maintain Dictionary of City and Person well as State and Person
  */
 
 public class AddressBook {
@@ -102,27 +104,25 @@ public class AddressBook {
 	}
 	
 	//Search for person in city
+	Dictionary<String, String> cityPerson = new Hashtable<String, String>(); 
 	public void displayPersonInCity(String cityName) {
-		int found=0;
 		for(int i=0; i <contactList.size(); i++) {	
 			if(contactList.get(i).city.equalsIgnoreCase(cityName)) {
-				found=1;
-				System.out.println("Person Name : "+contactList.get(i).firstName + " "+contactList.get(i).lastName);
+				cityPerson.put(cityName, contactList.get(i).firstName);				
 			}
 		}
-		if(found==0) {
-			System.out.println("No person found in given city");
-		}
+		System.out.println(cityPerson);
 	}
 	
 	//Search for person in state
+	Dictionary<String, String> statePerson = new Hashtable<String, String>(); 
 	public void displayPersonInState(String stateName) {
-		int found=0;
+	
 		for(int i=0; i <contactList.size(); i++) {	
 			if(contactList.get(i).state.equalsIgnoreCase(stateName)) {
-				found=1;
-				System.out.println("Person Name : "+contactList.get(i).firstName + " "+contactList.get(i).lastName);
+				statePerson.put(stateName, contactList.get(i).firstName);
 			}
 		}
+		System.out.println(statePerson);
 	}
 }

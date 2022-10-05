@@ -5,8 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * UC8 - Ability to search Person in a City or State across the multiple AddressBook 
- *  Search Result can show multiple
+ * UC9 - Ability to view Persons by City or State
+ * Maintain Dictionary of City and Person well as State and Person
  */
 public class Contact {
 

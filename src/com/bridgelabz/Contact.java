@@ -5,7 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * UC6 - add multiple Address Book to the System.
+ * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
+ * Address Book - Duplicate Check is done
  */
 public class Contact {
 

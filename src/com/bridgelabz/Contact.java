@@ -5,7 +5,7 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * UC3 - Ability to edit existing contact person using their name
+ *  UC4- Ability to delete a person using person's name - Use Console to delete a person
  */
 public class Contact {
 

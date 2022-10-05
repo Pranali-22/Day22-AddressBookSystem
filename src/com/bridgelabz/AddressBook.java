@@ -8,15 +8,12 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC3 - Ability to edit existing contact person using their name
+ *  UC4- Ability to delete a person using person's name - Use Console to delete a person
  */
 
 public class AddressBook {
 	
 	ArrayList<Contact> contactList = new ArrayList<Contact>();
-	//Created an array of size 100 to store contacts
-	//Contact[] contactList = new Contact[10];
-	static int index=0;
 	Scanner input = new Scanner(System.in);
 	
 	String firstName1,lastName1, address1, city1, state1, zip1, phoneNo1, email1;
@@ -37,7 +34,6 @@ public class AddressBook {
 		Contact personContact =  new Contact(firstName1, lastName1, address1, city1, state1, zip1, phoneNo1, email1);
 		
 		contactList.add(personContact);
-		index++;
 	}
 	
 	// Edit person name for the given name
@@ -49,7 +45,7 @@ public class AddressBook {
 		System.out.println("Enter name to update");
 		String nameToUpdate = input.nextLine();
 		
-		for(int i=0; i < index; i++) {
+		for(int i=0; i < contactList.size(); i++) {
 			if(contactList.get(i).firstName.equals(currentName)) {
 				contactList.get(i).firstName = nameToUpdate;
 				check=1;
@@ -67,8 +63,23 @@ public class AddressBook {
 	
 	public void displayAddressBook() {
 		System.out.println("Displaying all contacts from address book");
-		for(int i=0; i < index; i++) {
+		for(int i=0; i < contactList.size(); i++) {
 			contactList.get(i).displayContact();
+			System.out.println("---------------------");
+		}
+	}
+	
+	
+	//Delete a contact using name
+	public void deleteContact() {
+		
+		System.out.println("\nEnter name of person to delete contact");
+		String name = input.nextLine();
+		for(int i=0; i <contactList.size(); i++) {	
+			if(contactList.get(i).firstName.equals(name)) {
+				contactList.remove(i);
+				break;
+			}
 		}
 	}
 }

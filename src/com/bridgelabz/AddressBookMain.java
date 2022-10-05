@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
- * Address Book - Duplicate Check is done
+ * UC8 - Ability to search Person in a City or State across the multiple AddressBook 
+ *  Search Result can show multiple
  */
 
 public class AddressBookMain {
@@ -76,7 +76,7 @@ public class AddressBookMain {
             }
             
             System.out.println("\nPress 0 to exit \nPress 1 to add more contact \nPress 2 to edit contact \nPress 3 to display \nPress 4 to delete contact");
-            choice = input.nextInt();
+            choice = Integer.parseInt(input.next());
         }
 		
 		//add addressBook2 to  addressBookList
@@ -87,6 +87,22 @@ public class AddressBookMain {
 		System.out.println("Displaying all address books stored in arraylist\n");
 		for(int i=0;i<addressBookList.size();i++) {
 			addressBookList.get(i).displayAddressBook();
+		}
+		
+		//Display person within the city
+		System.out.println("\nEnter city name to find person");
+		String cityName = input.next();	
+		System.out.println("Display person within the city");
+		for(int i=0;i<addressBookList.size();i++) {
+			addressBookList.get(i).displayPersonInCity(cityName);
+		}
+		
+		//Display person within the state
+		System.out.println("\nEnter state to find person");
+		String stateName = input.next();		
+		System.out.println("Display person within the state");
+		for(int i=0;i<addressBookList.size();i++) {
+			addressBookList.get(i).displayPersonInState(stateName);
 		}
 	}
 }

@@ -5,8 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * UC7- Ability to ensure there is no Duplicate Entry of the same Person in a particular
- * Address Book - Duplicate Check is done
+ * UC8 - Ability to search Person in a City or State across the multiple AddressBook 
+ *  Search Result can show multiple
  */
 public class Contact {
 

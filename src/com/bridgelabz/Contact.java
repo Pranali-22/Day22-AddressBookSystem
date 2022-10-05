@@ -5,7 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- *  UC5- Ability to add multiple persons to AddressBook
+ * UC6- Refactor to add multiple Address Book to the System. 
+ * Each Address Book has a unique Name - Use Console to add new Address Book
  */
 public class Contact {
 
